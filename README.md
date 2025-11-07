@@ -1,38 +1,26 @@
 # sv
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Prueba Técnica César Pausin
 
-## Creating a project
+## Clonar repositorio
 
-If you're seeing this, you've probably already done this step. Congrats!
+Puedes clonar el proyecto desde este repositorio público usando git a través de:
 
 ```sh
-# create a new project in the current directory
-npx sv create
+# Clonar reposiorio
+git clone https://github.com/andrespausin/prueba-tecnica-pausin.git
 
-# create a new project in my-app
-npx sv create my-app
+# Luego de ello verificar que se tenga NodeJs instalado 
+node -v
+
+# Instalar las dependencias después de estar en la carpeta raiz del proyecto usando
+npm install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Una vez instaladas las dependencias, ejecuta `npm install`, inicia el server de desarrollo:
 
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
