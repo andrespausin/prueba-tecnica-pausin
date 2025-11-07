@@ -37,4 +37,4 @@ node -v
 npm install
 ```
 
-Luego de ello, ejecuta el proyecto usando `npm install`
+Luego de ello, ejecuta el proyecto usando `npm run dev`
