@@ -4,6 +4,5 @@ export const fileHandler = async (path: string): Promise<Response> => {
     if (!response.ok) {
         throw new Error(`Failed to fetch file at ${path}: ${response.statusText}`);
     }
-    console.log(`File fetched successfully from ${path}`);
     return response;
 }
