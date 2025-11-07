@@ -119,13 +119,6 @@
         mediaTemperatureValue += temperatureData[temperatureIndex].value;
         temperatureCounter += 1;
 
-        // Acumular la energía producida
-        console.log(
-          `${accumulatedEnergy} + ${Number(
-            (powerData[powerIndex].value * segundosEnHoras).toFixed(2),
-          )}`,
-        );
-
         accumulatedEnergy = Number(
           (
             accumulatedEnergy +
