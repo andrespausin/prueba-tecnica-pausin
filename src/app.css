@@ -1,0 +1,9 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e7e9eb;
+    font-family: "Inter", system-ui, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
