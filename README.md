@@ -1,40 +1,98 @@
-# Prueba tecnica Cesar Pausin
+Prueba Técnica – César Pausin
 
-Prueba Técnica César Pausin
+Este proyecto fue desarrollado como parte de una prueba técnica para demostrar mis habilidades en desarrollo web moderno utilizando Svelte 5, TypeScript y Vite.
+El objetivo principal fue construir una aplicación ligera, modular y de alto rendimiento, aplicando buenas prácticas y una arquitectura escalable.
 
-## Clonar repositorio
+Tecnologías utilizadas
 
-Puedes clonar el proyecto desde este repositorio público usando git a través de:
+Svelte 5
 
-```sh
-# Clonar reposiorio
+TypeScript
+
+Vite
+
+Node.js / npm
+
+HTML5 / CSS3
+
+Git & GitHub
+
+(Agrega aquí otras dependencias relevantes si las usaste, por ejemplo TailwindCSS, SvelteKit, etc.)
+
+Instalación y ejecución local
+
+Clonar el repositorio:
+
 git clone https://github.com/andrespausin/prueba-tecnica-pausin.git
 
-# Verificar que se tenga NodeJs instalado 
-node -v
 
-# Instalar las dependencias después de estar en la carpeta raiz del proyecto usando
+Entrar en el proyecto:
+
+cd prueba-tecnica-pausin
+
+
+Instalar dependencias:
+
 npm install
-```
-Ejecutar el proyecto
 
-Una vez instaladas las dependencias, ejecuta `npm install`, inicia el server de desarrollo:
 
-```sh
+Ejecutar el servidor de desarrollo:
+
 npm run dev
-```
 
-## Archivo comprimido
 
-Teniendo el archivo comprimido del proyecto, se debe eliminar la carpeta de node_modules en caso de que esté e instalar las
-dependencias.
+Abrir en el navegador:
 
-```sh
-# Verificar que se tenga NodeJs instalado 
-node -v
+Normalmente: http://localhost:5173
 
-# Instalar las dependencias después de estar en la carpeta raiz del proyecto usando
-npm install
-```
+Generar build de producción
 
-Luego de ello, ejecuta el proyecto usando `npm run dev`
+Para compilar los archivos optimizados para producción:
+
+npm run build
+
+
+El resultado se genera en la carpeta dist/.
+
+Si deseas probar el build localmente:
+
+npx serve dist/
+
+Objetivo del proyecto
+
+Demostrar competencias en:
+
+Desarrollo web con Svelte y TypeScript
+
+Uso eficiente de Vite como bundler
+
+Estructura modular, tipado estático y buenas prácticas
+
+Creación de una interfaz reactiva, optimizada y mantenible
+
+Funcionalidades implementadas
+
+Componentes dinámicos y reutilizables
+
+Comunicación entre componentes con props y stores
+
+Gestión de estado local
+
+Arquitectura modular y escalable
+
+Tipado completo con TypeScript
+
+Estilos limpios y responsivos
+
+Estructura del proyecto
+prueba-tecnica-pausin/
+├── src/
+│   ├── components/
+│   ├── routes/
+│   ├── stores/
+│   ├── App.svelte
+│   └── main.ts
+├── public/
+├── package.json
+├── vite.config.ts
+└── README.md
