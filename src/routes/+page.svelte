@@ -161,7 +161,33 @@
   <p>{error}</p>
 {:else}
   <div class="main-container">
+    <div class="header-container">
+      <h1>Dashboard de Monitoreo de Energía y Temperatura</h1>
+      <p class="project-description">
+        Prueba Técnica – Svelte 5 - Desplegada en Vercel <br />Este dashboard
+        consume datos simulados de un archivo YML para visualizar métricas clave
+        de un sistema IoT: potencia instantánea, energía acumulada y
+        temperatura. Los datos se actualizan dinámicamente cada 5 segundos.
+      </p>
+      <div class="project-links">
+        <a
+          href="https://github.com/andrespausin/prueba-tecnica-pausin"
+          target="_blank"
+          class="link-button"
+        >
+          Ver Código Fuente
+        </a>
+        <a
+          href="https://www.linkedin.com/in/c%C3%A9sar-andr%C3%A9s-pausin-508b3a261"
+          target="_blank"
+          class="link-button"
+        >
+          Mi Perfil en LinkedIn
+        </a>
+      </div>
+    </div>
     <div class="current-time">
+      Hora actual:
       {currentTime.getHours() < 10
         ? `0${currentTime.getHours()}`
         : currentTime.getHours()}:{currentTime.getMinutes() < 10
@@ -246,33 +272,94 @@
         </div>
       </div>
     </div>
+    <footer class="main-footer">
+      <p>Desarrollado y diseñado por César Pausin</p>
+      <p class="stack-text">
+        Stack principal: Svelte 5 (Runes), TypeScript, Vercel
+      </p>
+      <p class="license-text">© 2025 | Todos los derechos reservados</p>
+    </footer>
   </div>
 {/if}
 
 <style>
   .main-container {
     width: 98vw;
-    height: 100vh;
     min-height: 100vh;
     display: flex;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background: #f8fafc;
     font-family: "Inter", system-ui, sans-serif;
     box-sizing: border-box;
   }
 
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    max-width: 900px;
+    padding: 0 20px;
+  }
+
+  .header-container h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .link-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
+    border: none;
+  }
+
+  .link-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  }
+
   .current-time {
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 3.8rem;
+    font-weight: 800;
     text-align: center;
     color: #0f172a;
-    margin-bottom: 100px;
-    letter-spacing: -1px;
+    margin-bottom: 60px;
+    letter-spacing: -2px;
     font-family: "Inter", system-ui, sans-serif;
   }
 
@@ -280,85 +367,135 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
-    gap: 2vw;
-    width: 100%;
-    height: 83%;
+    align-items: flex-start;
+    gap: 3vw;
+    width: 95%;
+    max-width: 1400px;
   }
 
   .title {
-    margin-top: -90px;
+    margin-top: -30px;
+  }
+
+  .title h1 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #1c2e4b;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    display: inline-block;
   }
 
   .mt-10 {
-    margin-top: -20px;
+    margin-top: 0;
   }
 
   .data-container {
-    width: 45%;
-    height: fit-content;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1.2vh;
+    gap: 30px;
   }
 
   .chart-section {
-    flex: 1.8;
     background: #ffffff;
-    border-radius: 18px;
-    padding: 18px;
-    max-width: 900px;
-    max-height: fit-content;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
   }
 
   .chart-section:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .chart-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1e293b;
+  }
+
+  .chart-description {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 15px;
   }
 
   .info-section {
     display: grid;
-    grid-template-columns: 33fr 33fr 33fr;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vw;
   }
 
   .info-section :global(.card) {
-    flex: 1;
     background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 18px;
+    padding: 20px;
     transition:
       transform 0.25s ease,
       box-shadow 0.25s ease;
+    border: 1px solid #e2e8f0;
   }
 
   .info-section :global(.card:hover) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   }
 
+  .main-footer {
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 50px;
+    padding: 30px 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .main-footer p {
+    margin: 0;
+    padding: 3px 0;
+  }
+
+  .stack-text {
+    font-weight: 600;
+    color: #3b82f6;
+    margin-top: 8px;
+  }
+
+  .license-text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 10px;
+  }
   @media (max-width: 1200px) {
     .divided-by-two {
       margin: 30px 0;
       flex-direction: column;
       align-items: center;
       height: auto;
+      width: 95%;
+      gap: 50px;
+    }
+
+    .project-links {
+      max-width: 200px;
     }
 
     .title {
-      margin: 40px 0;
+      margin: 20px 0;
     }
 
     .data-container {
@@ -366,38 +503,49 @@
     }
 
     .chart-section {
-      height: 45vh;
+      height: auto;
     }
 
     .info-section {
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 20px;
     }
   }
 
   @media (max-width: 768px) {
     .main-container {
-      padding: 20px;
+      padding: 20px 10px;
       height: auto;
     }
 
-    .divided-by-two {
-      flex-direction: column;
-      height: auto;
+    .header-container h1 {
+      font-size: 2rem;
     }
 
-    .title {
-      margin: 10px 0;
+    .current-time {
+      font-size: 2.8rem;
+      margin-bottom: 30px;
     }
 
-    .chart-section {
-      padding: 14px;
+    .title h1 {
+      font-size: 1.4rem;
+    }
+
+    .data-container {
+      width: 100%;
     }
 
     .info-section {
-      display: flex;
+      grid-template-columns: 1fr;
+    }
+
+    .project-links {
       flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      width: 100%;
+    }
+    .link-button {
+      width: 90%;
+      text-align: center;
     }
   }
 </style>
